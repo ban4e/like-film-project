@@ -1,0 +1,34 @@
+@font-face {
+	font-family: 'BebasNeue';
+	src: url('../fonts/BebasNeueRegular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'a_simplerclg';
+	src: url('../fonts/a_simplerclg.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'openSans';
+	src: url('../fonts/openSans.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Comfortaa';
+	src: url('../fonts/Comfortaa.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'BreeSerif-Regular';
+	src: url('../fonts/BreeSerif-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
