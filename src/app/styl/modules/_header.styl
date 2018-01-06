@@ -1,0 +1,170 @@
+header
+	background-color #f4f4f4
+.overlay
+	position fixed
+	top 0
+	left 0
+	right 0	
+	bottom 0
+	width 100%
+	height 100%
+	background #000
+	opacity .7
+	transition all .3s linear
+	z-index 50
+.hide-all
+	height 0
+// .navbar
+// 	padding 0 calc(50% - 555px) 0 calc(50% - 555px)
+// 	background-color #f4f4f4
+// 	border-bottom solid 10px #0080b7
+
+	
+// // .navbar-light .navbar-brand, .navbar-light .navbar-toggler a
+// // 	color secondColor
+// // 	&:hover
+// // 		color orangeColor	
+// .navbar-brand
+// 	display block
+// 	position relative
+// 	align-items center
+// 	margin-right 0
+// 	font-size 24px
+// 	font-weight bold
+// 	line-height 40px
+// 	font-family 'Comfortaa', 'san-serif'
+// 	img
+// 		width 96px
+// 		height 48px
+// 	span
+// 		color orangeColor
+
+
+// .navbar-toggleable-md .navbar-nav .nav-link
+// 	padding 0 30px
+
+// .nav-item
+// 	.nav-link
+// 		box-sizing border-box
+
+// .navbar-nav
+// 	.nav-item
+// 		//padding 0 30px
+// 		a
+// 			height 60px
+// 			line-height 60px
+// 		&.active
+// 			background-color secondColor
+// 			position relative
+// 			transition all 0.5s cubic-bezier(0.41, 1.43, 0.19, 0.79) 0s
+// 			&:after
+// 				width 0
+// 				height 0
+// 				content ''
+// 				border-style solid
+// 				border-width 10px
+// 				border-color transparent transparent #0080b7 transparent
+// 				position absolute
+// 				bottom 0px
+// 				left 50%
+// 				margin-left -10px
+// 			span
+// 				color #fff
+.to_help
+	height 70px
+.menu
+	display flex
+	justify-content space-between
+	align-items center
+	padding 0 calc(50% - 555px) 0 calc(50% - 555px)
+	background-color mainColor
+	//width inherit
+	width 100%
+	position fixed
+	line-height 60px
+	border-bottom solid 10px #0080b7
+	top 0
+	z-index 99
+.menu_ul
+	display flex
+	a
+		color #515862
+.active
+	background-color secondColor
+	position relative
+	transition all 0.5s cubic-bezier(0.41, 1.43, 0.19, 0.79) 0s
+	a
+		color white
+	&:after
+		width 0
+		height 0
+		content ''
+		border-style solid
+		border-width 10px
+		border-color transparent transparent #0080b7 transparent
+		position absolute
+		bottom 0px
+		left 50%
+		margin-left -10px
+.nav-link-a
+	display block
+	padding 0 30px
+		
+	
+/// BURGER ///	
+.hamburger
+	display none
+.hamburger .line
+	width 32px
+	height 3px
+	background-color secondColor
+	display block
+	margin 5px auto
+	transition all 0.3s ease-in-out
+	
+.is-active
+	transition all 0.3s ease-in-out
+	transition-delay 0.6s
+	transform rotate(45deg)
+
+.is-active .line:nth-child(2)
+		width 0px
+
+.is-active .line:nth-child(1), .is-active .line:nth-child(3)
+	transition-delay 0.3s
+
+.is-active .line:nth-child(1)
+	transform translateY(5px)
+
+.is-active .line:nth-child(3)
+	transform translateY(-11px) rotate(90deg)
+ /// BURGER-END ///	
+
+.logo
+	display blcok
+	span
+		font-weight bold
+.logo-span-2
+	color orangeColor
+.logo-span-1
+	color secondColor
+
+.menu-mobile
+	display none
+	padding 20px
+	
+.wrapper_image
+	background url("../img/content/bg.png") 0 0 no-repeat
+	background-size 100% 100%
+	text-align center
+	display flex
+	justify-content center
+	align-items center
+	height 295px
+	//margin-top 70px
+	span
+		font-size 4rem
+		color #fff
+		text-transform uppercase
+		font-family 'a_simplerclg'
+		line-height 3rem

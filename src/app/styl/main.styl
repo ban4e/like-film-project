@@ -1,0 +1,91 @@
+@import '_vars.styl'    
+
+html 
+  line-height 1
+  font-size 14pt
+
+body
+  font-family mainFont, sans-serif
+  padding 0px
+  background-color mainColor
+
+h1,h2,h3,h4,h5,h6
+  margin 0
+
+ul,li
+  margin 0
+  padding 0
+  list-style-type none
+  
+p
+  margin 0
+  
+a:hover, a:visited, a:link, a:active
+  text-decoration none
+  color black
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video
+  vertical-align middle
+  
+textarea
+  resize none
+
+section
+  position relative
+  margin-bottom 20px
+
+input,
+select,
+button
+  outline none
+
+*, *:before, *:after
+  box-sizing border-box
+  
+.show
+  display block
+  
+::-moz-selection 
+  background: #b3d4fc;
+  text-shadow: none;
+  
+::selection 
+  background: #b3d4fc;
+  text-shadow: none;
+  
+.clearfix:before,
+.clearfix:after 
+  content: " ";
+  display: table;
+
+.clearfix:after 
+  clear: both;
+
+.clearfix 
+  *zoom: 1;
+
+// Стили шапки
+@import 'modules/_header.styl'
+
+// Стили меню
+@import 'modules/_menu.styl'
+
+// Стили главной страницы
+@import 'page/_index.styl'
+
+// Стили футера
+@import 'modules/_footer.styl'
+
+// Стили медиазапросов
+@import '_media.styl'
+
+	
+			
+
+ 
+

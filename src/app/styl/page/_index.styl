@@ -1,0 +1,457 @@
+.news
+	.col_last_project_title
+		span
+			color secondColor
+			text-transform uppercase
+			text-align center
+			font-size 2rem
+
+.col_last_project_title
+	height 134px
+	display flex
+	justify-content center
+	align-items center
+	
+.genre_wrap
+	border-top 1px solid brdrColor
+	border-bottom 1px solid brdrColor
+	margin-bottom 36px
+
+.genre_ham_mnu
+	display none
+	line-height 52px
+
+.genre_ul
+	display flex
+	flex-direction row
+	justify-content space-between
+	align-items center
+	border-left 1px solid brdrColor
+	border-right 1px solid brdrColor
+
+.genre_item
+	position relative
+	display flex
+	align-items center
+	justify-content center
+	width 100%
+	&:before
+		content ""
+		position absolute
+		height 24px
+		width 1px
+		right 0
+		top 50%
+		margin-top -12px
+		background brdrColor
+	a
+		line-height 52px
+		width 100%
+		text-align center
+		color #515862
+		&:hover
+			color secondColor
+			
+.active_genre
+	background-color secondColor
+	&:before
+		content ""
+		width 0px
+		height 0px
+	a, a:hover
+		color #fff
+
+.genre_ul			
+	.sub_menu_button
+		position relative
+		&:before
+			content ""
+			width 0px
+			height 0px
+
+.sub_menu
+	position absolute
+	top 53px
+	background-color orangeColor
+	width 100%
+	text-align left
+	display none
+	z-index 1
+
+.sub_menu_item
+	position relative
+	a
+		color #fff
+		display block
+		text-align left
+		position relative
+		padding-left 15px
+		&:before
+			content ""
+			position absolute
+			height 1px
+			width 80%
+			margin 0 auto
+			bottom 0
+			background-color rgba(255,255,255,0.2)
+		&:after
+			content ""
+			position absolute
+			height 100%
+			width 100%
+			top 0
+			left 0
+			background linear-gradient(to right, orangeColor, orangeColor, white)
+			opacity 0.2
+			visibility hidden
+			
+.genre_ul
+	.sub_menu_button:hover ul
+		display block
+			
+.sub_menu_item
+	a:hover
+		color #fff
+		&:after
+			visibility visible
+
+.active_sub
+	background repeating-linear-gradient(-45deg, rgba(249, 133, 97, 1), rgba(249, 133, 97, 1) 14px, rgba(255, 255, 255, 0.2) 14px, rgba(255, 255, 255, 0.2) 15px)
+
+.fa-caret-down
+	padding-left 5px
+	
+.film_card
+	display flex
+	flex-direction column
+	justify-content center
+	align-items center
+	margin-bottom 35px
+
+.film_img
+	overflow-y hidden
+	position relative
+	width 308px
+	background-color #fff
+	border-radius 3px
+	box-shadow 1px 1px 5px 2px #999
+	&:before
+		content ""
+		position absolute
+		height 1px
+		width 100%
+		bottom 40px
+		background brdrColor
+		
+	
+.image_to_film
+	cursor pointer
+	position relative
+	overflow hidden
+	img
+		height calc(223px + 15px)
+		width calc(100% + 15px)
+		transform translate(-15px,0px)
+		transition all 0.15s linear 0s
+		
+.film_text
+	padding 10px 20px 10px 20px
+	width 100%
+	background-color #fff
+	line-height 1
+	.fa
+		padding-right 5px
+	a
+		font-size 16px
+		display block
+		cursor pointer
+		margin-bottom 8px
+		&:hover
+			text-decoration underline
+	span
+		font-size 14px
+		display block
+		margin-bottom 20px
+	article
+		display inline-block
+		font-size 14px
+
+.film_text_bottom
+	display flex
+	align-items center
+	justify-content space-between
+	
+.stars-svg
+	cursor pointer
+	&:hover .star polygon
+		fill #ffd055 !important
+.star
+	float left
+	polygon
+		fill #d8d8d8
+		stroke black
+		stroke-width 1
+		transform translate(0px,1px)
+	&:hover ~ .star polygon
+		fill #d8d8d8 !important
+		
+&[data-stars]
+	.star polygon
+		fill #FD4
+
+&[data-stars="1"]
+	.star:nth-child(1) ~ .star polygon
+		fill #d8d8d8
+
+&[data-stars="2"]
+	.star:nth-child(2) ~ .star polygon
+		fill #d8d8d8
+
+&[data-stars="3"]
+	.star:nth-child(3) ~ .star polygon
+		fill #d8d8d8
+
+&[data-stars="4"]
+	.star:nth-child(4) ~ .star polygon
+		fill #d8d8d8
+
+&[data-stars="5"]
+	.star:nth-child(5) ~ .star polygon
+		fill #d8d8d8
+
+
+// .stars-1
+// 	display flex
+// 	align-items center
+// 	justify-content space-between
+// 	line-height 1
+// 	form
+// 		line-height 1
+// 	input
+// 		display none
+// 	label.star
+// 		float right
+// 		padding 0px 0px 0px 2px
+// 		margin-bottom 0px
+// 		color #444
+// 		line-height 1
+// 		font-size 19.5px
+// 		transition all .2s
+// 		&:before
+// 			font-family FontAwesome
+// 			content '\f006'
+		
+// input.star:checked ~ label.star:before
+// 	content "\f005"
+// 	color #FD4
+// 	transition all .25s
+// input.star-5:checked ~ label.star:before 
+// 	color #FD4
+// 	 text-shadow 0 0 2px black
+// input.star-1:checked ~ label.star:before
+// 	color #F62
+// #star-1:checked ~ section [for='star-1'] svg, #star-2:checked ~ section [for='star-1'] svg, #star-2:checked ~ section [for='star-2'] svg, #star-3:checked ~ section [for='star-1'] svg, #star-3:checked ~ section [for='star-2'] svg, #star-3:checked ~ section [for='star-3'] svg, #star-4:checked ~ section [for='star-1'] svg, #star-4:checked ~ section [for='star-2'] svg, #star-4:checked ~ section [for='star-3'] svg, #star-4:checked ~ section [for='star-4'] svg, #star-5:checked ~ section [for='star-1'] svg, #star-5:checked ~ section [for='star-2'] svg, #star-5:checked ~ section [for='star-3'] svg, #star-5:checked ~ section [for='star-4'] svg, #star-5:checked ~ section [for='star-5'] svg
+// 	transform scale(1)
+// #star-1:checked ~ section [for='star-1'] svg path, #star-2:checked ~ section [for='star-1'] svg path, #star-2:checked ~ section [for='star-2'] svg path, #star-3:checked ~ section [for='star-1'] svg path, #star-3:checked ~ section [for='star-2'] svg path, #star-3:checked ~ section [for='star-3'] svg path, #star-4:checked ~ section [for='star-1'] svg path, #star-4:checked ~ section [for='star-2'] svg path, #star-4:checked ~ section [for='star-3'] svg path, #star-4:checked ~ section [for='star-4'] svg path, #star-5:checked ~ section [for='star-1'] svg path, #star-5:checked ~ section [for='star-2'] svg path, #star-5:checked ~ section [for='star-3'] svg path, #star-5:checked ~ section [for='star-4'] svg path, #star-5:checked ~ section [for='star-5'] svg path
+// 	fill #FFBB00
+// 	stroke #cc9600
+
+// section .stars
+// 	width 100%
+// 	text-align left
+// 	left 50%
+// 	transform translate3d(-50%, -50%, 0)
+// 	margin-bottom 0px
+// 	label
+// 		display inline-block
+// 		width 25px
+// 		text-align center
+// 		cursor pointer
+// 		margin-bottom 0px
+// 	label svg
+// 		width 100%
+// 		height auto
+// 		fill white
+// 		stroke #CCC
+// 		transform scale(0.8)
+// 		transition transform 200ms ease-in-out
+// 	label svg path
+// 	transition fill 200ms ease-in-out, stroke 100ms ease-in-out
+// 	label[for="star-null"]
+// 		color #999
+
+.caption
+	position absolute
+	top 0px
+	left 0px
+	height 100%
+	width 100%
+	text-align center
+	color white
+	h4
+		margin 10px auto 0px auto
+		background rgba(0,0,0,0.7)
+		font-weight 400
+		text-transform uppercase
+		font-size 22px
+		padding 6px 0px
+		position relative
+		top -200px
+		transition all 0.2s cubic-bezier(0.41, 1.43, 0.19, 0.79) 0s
+		&:before
+			content ""
+			width 0px
+			height 0px
+			display block
+			border 20px solid transparent
+			border-top 20px solid rgba(0,0,0,0.7)
+			position absolute
+			top 100%
+			left 50%
+			margin-left -20px
+	p
+		width 100%
+		max-width calc(90% - 20px)
+		margin 30px auto 0px auto
+		background rgba(0,0,0,0.8)
+		font-weight 400
+		padding 6px 10px
+		font-size 14px
+		position relative
+		top -250px
+		transition all 0.2s cubic-bezier(0.41, 1.43, 0.19, 0.79) 0s
+	a
+		display inline-block
+		margin 10px auto 0px auto
+		background-color orangeColor
+		color inherit
+		padding 7px 20px
+		font-size 14px
+		box-shadow inset 0px 0px 7px 1px rgba(0,0,0,0.3)
+		border-radius: 5px
+		top -300px
+		position relative
+		transition all 0.2s cubic-bezier(0.41, 1.43, 0.19, 0.79) 0s
+		
+.image_to_film:hover img
+	transform translate(0,0)
+
+.image_to_film:hover .caption h4
+		transition-delay 0.6s
+.image_to_film:hover .caption p
+		transition-delay 0.4s
+.image_to_film:hover .caption a
+	transition-delay 0.2s
+.image_to_film:hover .caption h4, .image_to_film:hover .caption p, .image_to_film:hover .caption a
+	top 0px
+
+.pagination
+	justify-content center
+	margin-bottom 40px
+	a
+		color white
+		margin-right 8px
+.pages
+	display block
+	position relative
+	width 30px
+	height 30px
+	border-radius 3px
+	background-color #aaaaaa
+	text-align center
+	&:before, &:after
+		content ""
+		width 1px
+		height 0
+		position absolute
+		transition all 0.2s linear
+		background #515862
+		transition-delay .2s
+	&:hover::before, &:hover::after
+		height 100%
+	span
+		display block
+		width 100%
+		height 100%
+		&:before, &:after
+			content ""
+			width 0
+			height 1px
+			position absolute
+			transition all 0.2s linear
+			background #515862
+			transition-delay 0s
+		&:hover::before, &:hover::after
+			width 100%
+
+	
+.pages:before
+	top 0
+	right 0
+.pages:after
+	bottom 0
+	left 0
+.pages span:before
+	top 0
+	right 0
+.pages span:after
+	bottom 0
+	left 0
+.current_page
+	background-color secondColor
+.prev_next
+	background-color secondColor
+	border-radius 3px
+	padding 0 5px 0 5px
+	&:hover
+		text-decoration underline
+
+
+.about_wrap
+	border-top 1px solid brdrColor
+	padding-top 32px
+
+.about_title
+	display flex
+	justify-content center
+	margin-bottom 32px
+	span
+		color secondColor
+		text-transform uppercase
+		text-align center
+		font-size 24px
+
+.about_text
+	text-align center
+	padding 0 80px 0 80px
+	margin-bottom 32px
+	
+
+@keyframes bounceInDown
+	0%
+		opacity 0
+		transform translateY(-200px)
+	60%
+		opacity 1
+		transform translateY(30px)
+	80%
+		transform translateY(-10px)
+	100%
+		transform translateY(0)
+
+.bounceInDown
+	animation-name bounceInDown
+	animation-duration .5s
+	
+@keyframes bounceOutUp
+	0%
+		transform translateY(0)
+	20%
+		opacity 1
+		transform translateY(20px)
+	100%
+		opacity 0
+		transform translateY(-200px)
+.bounceOutUp
+	animation-name bounceOutUp
+	animation-duration .5s
